@@ -1,0 +1,19 @@
+{
+  "modules": [
+    {
+      "id": "a1-1",
+      "title": "A1.1 - Basic Introductions",
+      "level": "A1",
+      "description": "Learn to introduce yourself in French",
+      "articles": ["intro-1", "intro-2", "intro-3"]
+    },
+    {
+      "id": "a1-2",
+      "title": "A1.2 - Family & Friends",
+      "level": "A1",
+      "description": "Talk about your family and friends",
+      "articles": ["family-1", "family-2", "family-3"]
+    }
+  ]
+}
+

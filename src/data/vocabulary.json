@@ -1,0 +1,20 @@
+{
+  "vocabulary": {
+    "bonjour": {
+      "english": "hello",
+      "pronunciation": "bon-ZHOOR",
+      "example": "Bonjour, comment allez-vous ?"
+    },
+    "famille": {
+      "english": "family",
+      "pronunciation": "fa-MEEL",
+      "example": "Ma famille est très gentille."
+    },
+    "maison": {
+      "english": "house",
+      "pronunciation": "may-ZOHN",
+      "example": "J'habite dans une petite maison."
+    }
+  }
+}
+

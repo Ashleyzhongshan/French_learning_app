@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "id": "intro-1",
+      "title": "Se Présenter",
+      "content": "Bonjour ! Je m'appelle Marie. J'ai vingt-cinq ans. Je suis française. J'habite à Paris avec ma famille. J'aime beaucoup lire et écouter de la musique. Et vous, comment vous appelez-vous ?",
+      "level": "A1",
+      "estimatedTime": 3
+    },
+    {
+      "id": "intro-2",
+      "title": "Ma Journée",
+      "content": "Je me lève à sept heures du matin. Je prends mon petit-déjeuner avec du café et des croissants. Puis je vais au travail en métro. Le soir, je dîne avec mes amis dans un restaurant. Nous parlons français et nous rions beaucoup.",
+      "level": "A1",
+      "estimatedTime": 4
+    }
+  ]
+}
+
