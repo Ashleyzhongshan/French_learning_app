@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { Volume2, Plus, Check, Languages } from 'lucide-react'
-import { translateText, getCommonsAudioUrlForFrenchWord, pickPreferredFrenchVoice } from '@/lib/utils'
+import { translateText, getCommonsAudioUrlForFrenchWord, pickPreferredFrenchVoice, createNaturalSpeechSettings } from '@/lib/utils'
 
 interface InteractiveWordProps {
   word: string
@@ -31,9 +31,23 @@ export default function InteractiveWord({ word, onToggleSave, isSaved, isActive,
       const speak = () => {
         const utterance = new SpeechSynthesisUtterance(cleanWord)
         utterance.lang = 'fr-FR'
-        utterance.rate = 0.95
+        
+        // Apply natural speech settings for individual words
+        createNaturalSpeechSettings(utterance)
+        
+        // Select the best available voice
         const fr = pickPreferredFrenchVoice()
         if (fr) utterance.voice = fr
+        
+        // Add event listeners for better control
+        utterance.onstart = () => {
+          console.log('Word pronunciation started with voice:', utterance.voice?.name)
+        }
+        
+        utterance.onerror = (event) => {
+          console.log('Word pronunciation error:', event.error)
+        }
+        
         window.speechSynthesis.speak(utterance)
       }
       const voices = window.speechSynthesis.getVoices()

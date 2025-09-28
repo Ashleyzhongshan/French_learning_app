@@ -1,19 +1,40 @@
 {
   "modules": [
     {
-      "id": "a1-1",
-      "title": "A1.1 - Basic Introductions",
+      "id": "delf-a1",
+      "title": "DELF A1 - Découverte",
       "level": "A1",
-      "description": "Learn to introduce yourself in French",
-      "articles": ["intro-1", "intro-2", "intro-3"]
+      "description": "Niveau découverte - Apprendre les bases du français",
+      "articles": ["a1-01", "a1-02", "a1-03", "a1-04", "a1-05", "a1-06", "a1-07", "a1-08", "a1-09", "a1-10", "a1-11", "a1-12", "a1-13", "a1-14", "a1-15", "a1-16", "a1-17", "a1-18", "a1-19", "a1-20"],
+      "delfLevel": "A1",
+      "totalArticles": 20
     },
     {
-      "id": "a1-2",
-      "title": "A1.2 - Family & Friends",
-      "level": "A1",
-      "description": "Talk about your family and friends",
-      "articles": ["family-1", "family-2", "family-3"]
+      "id": "delf-a2",
+      "title": "DELF A2 - Survie",
+      "level": "A2", 
+      "description": "Niveau survie - Communiquer dans des situations simples",
+      "articles": ["a2-01", "a2-02", "a2-03", "a2-04", "a2-05", "a2-06", "a2-07", "a2-08", "a2-09", "a2-10", "a2-11", "a2-12", "a2-13", "a2-14", "a2-15", "a2-16", "a2-17", "a2-18", "a2-19", "a2-20"],
+      "delfLevel": "A2",
+      "totalArticles": 20
+    },
+    {
+      "id": "delf-b1",
+      "title": "DELF B1 - Seuil",
+      "level": "B1",
+      "description": "Niveau seuil - S'exprimer de manière autonome",
+      "articles": ["b1-01", "b1-02", "b1-03", "b1-04", "b1-05", "b1-06", "b1-07", "b1-08", "b1-09", "b1-10", "b1-11", "b1-12", "b1-13", "b1-14", "b1-15", "b1-16", "b1-17", "b1-18", "b1-19", "b1-20"],
+      "delfLevel": "B1",
+      "totalArticles": 20
+    },
+    {
+      "id": "delf-b2",
+      "title": "DELF B2 - Avancé",
+      "level": "B2",
+      "description": "Niveau avancé - Maîtriser le français dans des contextes complexes",
+      "articles": ["b2-01", "b2-02", "b2-03", "b2-04", "b2-05", "b2-06", "b2-07", "b2-08", "b2-09", "b2-10", "b2-11", "b2-12", "b2-13", "b2-14", "b2-15", "b2-16", "b2-17", "b2-18", "b2-19", "b2-20"],
+      "delfLevel": "B2",
+      "totalArticles": 20
     }
   ]
 }
-

@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import InteractiveWord from '@/components/InteractiveWord'
-import { BookOpen, Clock, Volume2, X, Languages } from 'lucide-react'
-import { translateText, pickPreferredFrenchVoice } from '@/lib/utils'
+import { BookOpen, Clock, Volume2, X, Languages, Play, Pause, Square } from 'lucide-react'
+import { translateText, pickPreferredFrenchVoice, createNaturalSpeechSettings } from '@/lib/utils'
 
 interface Article {
   id: string
@@ -19,11 +19,38 @@ export default function ArticleReader({ article }: { article: Article }) {
   const router = useRouter()
   const [isTranslating, setIsTranslating] = useState(false)
   const [translation, setTranslation] = useState<string>('')
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [audioProgress, setAudioProgress] = useState(0)
+  const [audioDuration, setAudioDuration] = useState(0)
+  const [currentUtterance, setCurrentUtterance] = useState<SpeechSynthesisUtterance | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
+  const [progressInterval, setProgressInterval] = useState<NodeJS.Timeout | null>(null)
+  const [isDragging, setIsDragging] = useState(false)
 
   useEffect(() => {
     const saved = localStorage.getItem('savedWords')
     if (saved) setSavedWords(JSON.parse(saved))
   }, [])
+
+  // Track audio progress
+  useEffect(() => {
+    if (isPlaying && audioDuration > 0 && !isDragging) {
+      const interval = setInterval(() => {
+        setAudioProgress(prev => {
+          const increment = 100 / (audioDuration / 100) // Update every 100ms
+          return Math.min(prev + increment, 100)
+        })
+      }, 100)
+      setProgressInterval(interval)
+    } else if (progressInterval) {
+      clearInterval(progressInterval)
+      setProgressInterval(null)
+    }
+    
+    return () => {
+      if (progressInterval) clearInterval(progressInterval)
+    }
+  }, [isPlaying, audioDuration, isDragging])
 
   const toggleSaveWord = (word: string) => {
     const normalized = word.toLowerCase()
@@ -56,15 +83,71 @@ export default function ArticleReader({ article }: { article: Article }) {
   const readArticle = () => {
     try {
       if (!('speechSynthesis' in window)) return
+      
+      if (isPlaying) {
+        // Pause current speech
+        window.speechSynthesis.pause()
+        setIsPlaying(false)
+        setIsPaused(true)
+        return
+      }
+      
+      if (isPaused) {
+        // Resume paused speech
+        window.speechSynthesis.resume()
+        setIsPlaying(true)
+        setIsPaused(false)
+        return
+      }
+      
+      // Start new speech from current progress
       window.speechSynthesis.cancel()
+      
       const speak = () => {
         const utterance = new SpeechSynthesisUtterance(article.content)
         utterance.lang = 'fr-FR'
-        utterance.rate = 0.95
+        
+        // Apply natural speech settings
+        createNaturalSpeechSettings(utterance)
+        
+        // Select the best available voice
         const fr = pickPreferredFrenchVoice()
         if (fr) utterance.voice = fr
+        
+        // Store current utterance for control
+        setCurrentUtterance(utterance)
+        
+        // Add event listeners for progress tracking
+        utterance.onstart = () => {
+          console.log('Speech started with voice:', utterance.voice?.name)
+          setIsPlaying(true)
+          setIsPaused(false)
+          if (audioProgress === 0) {
+            setAudioProgress(0)
+          }
+        }
+        
+        utterance.onend = () => {
+          setIsPlaying(false)
+          setIsPaused(false)
+          setAudioProgress(100)
+          setCurrentUtterance(null)
+        }
+        
+        utterance.onerror = (event) => {
+          console.log('Speech error:', event.error)
+          setIsPlaying(false)
+          setIsPaused(false)
+          setCurrentUtterance(null)
+        }
+        
+        // Estimate duration based on text length and speech rate
+        const estimatedDuration = (article.content.length / 15) * 1000 // Rough estimate
+        setAudioDuration(estimatedDuration)
+        
         window.speechSynthesis.speak(utterance)
       }
+      
       const voices = window.speechSynthesis.getVoices()
       if (voices.length === 0) {
         const onVoices = () => {
@@ -78,6 +161,56 @@ export default function ArticleReader({ article }: { article: Article }) {
     } catch (_) {
       // noop
     }
+  }
+
+  const stopAudio = () => {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel()
+      setIsPlaying(false)
+      setIsPaused(false)
+      setAudioProgress(0)
+      setCurrentUtterance(null)
+      if (progressInterval) {
+        clearInterval(progressInterval)
+        setProgressInterval(null)
+      }
+    }
+  }
+
+  const handleProgressMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    setIsDragging(true)
+    if (progressInterval) {
+      clearInterval(progressInterval)
+      setProgressInterval(null)
+    }
+    handleProgressUpdate(e)
+  }
+
+  const handleProgressMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isDragging) {
+      handleProgressUpdate(e)
+    }
+  }
+
+  const handleProgressMouseUp = () => {
+    setIsDragging(false)
+    // Restart progress tracking if playing
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        setAudioProgress(prev => {
+          const increment = 100 / (audioDuration / 100)
+          return Math.min(prev + increment, 100)
+        })
+      }, 100)
+      setProgressInterval(interval)
+    }
+  }
+
+  const handleProgressUpdate = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const clickX = e.clientX - rect.left
+    const percentage = Math.max(0, Math.min(1, clickX / rect.width))
+    setAudioProgress(percentage * 100)
   }
 
   const translateArticle = async () => {
@@ -139,13 +272,6 @@ export default function ArticleReader({ article }: { article: Article }) {
             <span>{article.estimatedTime} min read</span>
           </div>
           <div className="ml-auto flex items-center gap-2">
-            <button 
-              onClick={readArticle}
-              className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
-            >
-              <Volume2 size={18} />
-              Read Article Aloud
-            </button>
             <button
               onClick={translateArticle}
               className="flex items-center gap-2 bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600 transition-colors"
@@ -161,6 +287,47 @@ export default function ArticleReader({ article }: { article: Article }) {
               <X size={18} />
               Exit
             </button>
+          </div>
+        </div>
+        
+        {/* Audio Progress Bar */}
+        <div className="bg-gray-100 rounded-lg p-4 mb-6">
+          <div className="flex items-center gap-4 mb-3">
+            <button 
+              onClick={readArticle}
+              className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              {isPlaying ? <Pause size={18} /> : <Play size={18} />}
+              {isPlaying ? 'Pause' : isPaused ? 'Resume' : 'Play'} Article
+            </button>
+            <button 
+              onClick={stopAudio}
+              className="flex items-center gap-2 bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600 transition-colors"
+              disabled={!isPlaying && audioProgress === 0}
+            >
+              <Square size={16} />
+              Stop
+            </button>
+          </div>
+          
+          {/* Progress Bar */}
+          <div className="relative">
+            <div 
+              className="w-full bg-gray-300 rounded-full h-3 cursor-pointer hover:h-4 transition-all select-none"
+              onMouseDown={handleProgressMouseDown}
+              onMouseMove={handleProgressMouseMove}
+              onMouseUp={handleProgressMouseUp}
+              onMouseLeave={handleProgressMouseUp}
+            >
+              <div 
+                className="bg-green-500 h-full rounded-full transition-all duration-100 ease-out"
+                style={{ width: `${audioProgress}%` }}
+              />
+            </div>
+            <div className="flex justify-between text-xs text-gray-500 mt-1">
+              <span>0:00</span>
+              <span>{Math.round(audioDuration / 1000 / 60)}:{(Math.round(audioDuration / 1000) % 60).toString().padStart(2, '0')}</span>
+            </div>
           </div>
         </div>
         

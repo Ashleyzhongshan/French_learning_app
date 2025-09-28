@@ -1,19 +1,724 @@
 {
   "articles": [
     {
-      "id": "intro-1",
-      "title": "Se Présenter",
-      "content": "Bonjour ! Je m'appelle Marie. J'ai vingt-cinq ans. Je suis française. J'habite à Paris avec ma famille. J'aime beaucoup lire et écouter de la musique. Et vous, comment vous appelez-vous ?",
+      "id": "a1-01",
+      "title": "Bonjour et Salutations",
+      "content": "Bonjour ! Je m'appelle Marie. J'ai vingt-cinq ans. Je suis française. J'habite à Paris. Comment allez-vous ? Très bien, merci. Et vous ? Moi aussi, ça va bien. Au revoir !",
       "level": "A1",
-      "estimatedTime": 3
+      "estimatedTime": 2,
+      "delfLevel": "A1",
+      "topic": "Introductions"
     },
     {
-      "id": "intro-2",
-      "title": "Ma Journée",
-      "content": "Je me lève à sept heures du matin. Je prends mon petit-déjeuner avec du café et des croissants. Puis je vais au travail en métro. Le soir, je dîne avec mes amis dans un restaurant. Nous parlons français et nous rions beaucoup.",
+      "id": "a1-02", 
+      "title": "Ma Famille",
+      "content": "Dans ma famille, nous sommes quatre personnes. Mon père s'appelle Pierre. Ma mère s'appelle Sophie. J'ai une sœur qui s'appelle Claire. Nous habitons dans une maison.",
       "level": "A1",
-      "estimatedTime": 4
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Family"
+    },
+    {
+      "id": "a1-03",
+      "title": "Les Couleurs",
+      "content": "J'aime les couleurs. Le rouge est ma couleur préférée. Le ciel est bleu. L'herbe est verte. Les fleurs sont jaunes. Le soleil est orange.",
+      "level": "A1",
+      "estimatedTime": 2,
+      "delfLevel": "A1",
+      "topic": "Colors"
+    },
+    {
+      "id": "a1-04",
+      "title": "Les Nombres",
+      "content": "Un, deux, trois, quatre, cinq. J'ai cinq ans. Ma sœur a trois ans. Nous comptons ensemble : un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix.",
+      "level": "A1",
+      "estimatedTime": 2,
+      "delfLevel": "A1",
+      "topic": "Numbers"
+    },
+    {
+      "id": "a1-05",
+      "title": "Les Animaux",
+      "content": "J'aime les animaux. Le chat est petit. Le chien est grand. L'oiseau vole dans le ciel. Le poisson nage dans l'eau. Les animaux sont mes amis.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Animals"
+    },
+    {
+      "id": "a1-06",
+      "title": "Ma Maison",
+      "content": "J'habite dans une maison. Il y a une cuisine, un salon et deux chambres. Dans ma chambre, il y a un lit et une table. J'aime ma maison.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Home"
+    },
+    {
+      "id": "a1-07",
+      "title": "Les Vêtements",
+      "content": "Aujourd'hui, je porte une robe rouge. Mon frère porte un pantalon bleu. Ma mère porte une jupe verte. Nous avons de beaux vêtements.",
+      "level": "A1",
+      "estimatedTime": 2,
+      "delfLevel": "A1",
+      "topic": "Clothing"
+    },
+    {
+      "id": "a1-08",
+      "title": "La Nourriture",
+      "content": "J'aime manger. Le matin, je mange du pain et je bois du lait. À midi, je mange de la viande et des légumes. Le soir, je mange des fruits.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Food"
+    },
+    {
+      "id": "a1-09",
+      "title": "Les Jours de la Semaine",
+      "content": "Lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche. Aujourd'hui, c'est lundi. Demain, ce sera mardi. Hier, c'était dimanche.",
+      "level": "A1",
+      "estimatedTime": 2,
+      "delfLevel": "A1",
+      "topic": "Time"
+    },
+    {
+      "id": "a1-10",
+      "title": "Le Temps",
+      "content": "Aujourd'hui, il fait beau. Le soleil brille. Il n'y a pas de nuages. Hier, il pleuvait. Demain, il fera froid. J'aime le beau temps.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Weather"
+    },
+    {
+      "id": "a1-11",
+      "title": "Les Parties du Corps",
+      "content": "J'ai une tête avec deux yeux, un nez et une bouche. J'ai deux bras et deux jambes. J'ai dix doigts sur les mains. Mon corps est en bonne santé.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Body"
+    },
+    {
+      "id": "a1-12",
+      "title": "Les Transports",
+      "content": "Je vais à l'école en bus. Mon père va au travail en voiture. Ma mère prend le métro. Nous voyageons en train pour les vacances.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Transportation"
+    },
+    {
+      "id": "a1-13",
+      "title": "Les Sports",
+      "content": "J'aime le football. Je joue au football avec mes amis. Ma sœur fait du tennis. Mon frère fait de la natation. Le sport est important.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Sports"
+    },
+    {
+      "id": "a1-14",
+      "title": "Les Loisirs",
+      "content": "Pendant mon temps libre, je lis des livres. J'aime aussi écouter de la musique. Je regarde la télévision. Je joue avec mes amis.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Hobbies"
+    },
+    {
+      "id": "a1-15",
+      "title": "L'École",
+      "content": "Je vais à l'école tous les jours. J'apprends le français et les mathématiques. J'ai de bons amis à l'école. J'aime mon professeur.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "School"
+    },
+    {
+      "id": "a1-16",
+      "title": "Les Saisons",
+      "content": "Il y a quatre saisons : le printemps, l'été, l'automne et l'hiver. Au printemps, les fleurs poussent. En été, il fait chaud. En automne, les feuilles tombent. En hiver, il neige.",
+      "level": "A1",
+      "estimatedTime": 4,
+      "delfLevel": "A1",
+      "topic": "Seasons"
+    },
+    {
+      "id": "a1-17",
+      "title": "Les Meubles",
+      "content": "Dans ma chambre, il y a un lit, une table et une chaise. Dans le salon, il y a un canapé et une télévision. Dans la cuisine, il y a une table et des chaises.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Furniture"
+    },
+    {
+      "id": "a1-18",
+      "title": "Les Professions",
+      "content": "Mon père est médecin. Ma mère est professeure. Mon oncle est cuisinier. Ma tante est infirmière. Ils aiment leur travail.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Professions"
+    },
+    {
+      "id": "a1-19",
+      "title": "Les Vacances",
+      "content": "Pendant les vacances, je vais à la plage. Je nage dans la mer. Je construis des châteaux de sable. Je mange des glaces. J'aime les vacances.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Vacations"
+    },
+    {
+      "id": "a1-20",
+      "title": "Les Fêtes",
+      "content": "J'aime les fêtes. Pour mon anniversaire, j'invite mes amis. Nous mangeons un gâteau. Nous jouons ensemble. C'est une belle fête.",
+      "level": "A1",
+      "estimatedTime": 3,
+      "delfLevel": "A1",
+      "topic": "Celebrations"
+    },
+    {
+      "id": "a2-01",
+      "title": "Ma Journée Typique",
+      "content": "Je me lève à sept heures du matin. Je prends mon petit-déjeuner avec du café et des croissants. Puis je vais au travail en métro. Le soir, je dîne avec mes amis dans un restaurant. Nous parlons français et nous rions beaucoup.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Daily Routine"
+    },
+    {
+      "id": "a2-02",
+      "title": "Mon Quartier",
+      "content": "J'habite dans un quartier très agréable. Il y a une boulangerie où je vais acheter du pain frais tous les matins. Près de chez moi, il y a un parc avec des arbres et des bancs. Les enfants jouent au football et les adultes se promènent. Le samedi, il y a un marché où l'on peut acheter des fruits et des légumes.",
+      "level": "A2",
+      "estimatedTime": 5,
+      "delfLevel": "A2",
+      "topic": "Neighborhood"
+    },
+    {
+      "id": "a2-03",
+      "title": "Mes Hobbies",
+      "content": "Pendant mon temps libre, j'aime beaucoup lire des romans français. Je vais souvent à la bibliothèque pour emprunter de nouveaux livres. J'aime aussi faire du sport : je cours dans le parc trois fois par semaine. Le week-end, je cuisine avec mes amis et nous essayons de nouvelles recettes.",
+      "level": "A2",
+      "estimatedTime": 5,
+      "delfLevel": "A2",
+      "topic": "Hobbies"
+    },
+    {
+      "id": "a2-04",
+      "title": "Les Voyages",
+      "content": "L'année dernière, je suis allé en Italie avec ma famille. Nous avons visité Rome et Florence. Les monuments étaient magnifiques. Nous avons mangé de délicieuses pâtes et de la pizza. Les Italiens étaient très accueillants. J'aimerais retourner en Italie bientôt.",
+      "level": "A2",
+      "estimatedTime": 5,
+      "delfLevel": "A2",
+      "topic": "Travel"
+    },
+    {
+      "id": "a2-05",
+      "title": "La Cuisine Française",
+      "content": "La cuisine française est célèbre dans le monde entier. J'aime préparer des plats traditionnels comme la ratatouille et le coq au vin. Ma grand-mère m'a appris à faire des crêpes. Le dimanche, nous mangeons souvent un bon pot-au-feu en famille. La cuisine française est un art.",
+      "level": "A2",
+      "estimatedTime": 5,
+      "delfLevel": "A2",
+      "topic": "Food Culture"
+    },
+    {
+      "id": "a2-06",
+      "title": "Les Amis",
+      "content": "J'ai de très bons amis depuis l'enfance. Nous nous rencontrons régulièrement pour prendre un café ou aller au cinéma. Mes amis m'aident toujours quand j'ai des problèmes. L'amitié est très importante dans ma vie. Nous partageons nos joies et nos peines.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Friendship"
+    },
+    {
+      "id": "a2-07",
+      "title": "Le Travail",
+      "content": "Je travaille dans une entreprise d'informatique. Mon travail est intéressant mais parfois stressant. J'ai de bons collègues qui m'aident beaucoup. Le matin, je prends le métro pour aller au bureau. Le soir, je rentre chez moi fatigué mais satisfait.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Work"
+    },
+    {
+      "id": "a2-08",
+      "title": "Les Saisons en France",
+      "content": "En France, nous avons quatre saisons bien distinctes. Au printemps, les fleurs fleurissent et les oiseaux chantent. L'été, il fait chaud et nous allons à la plage. En automne, les feuilles tombent des arbres et changent de couleur. L'hiver, il fait froid et il neige parfois dans les montagnes.",
+      "level": "A2",
+      "estimatedTime": 5,
+      "delfLevel": "A2",
+      "topic": "Seasons"
+    },
+    {
+      "id": "a2-09",
+      "title": "Les Animaux de Compagnie",
+      "content": "J'ai un chat qui s'appelle Minou. Il est très mignon et il aime jouer avec une balle. Ma sœur a un chien nommé Rex. Rex est très gentil et il adore les promenades dans le parc. Nous aimons beaucoup nos animaux de compagnie. Ils nous apportent beaucoup de joie.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Pets"
+    },
+    {
+      "id": "a2-10",
+      "title": "Les Études",
+      "content": "J'étudie l'économie à l'université. Les cours sont difficiles mais intéressants. J'ai beaucoup de devoirs à faire chaque semaine. Mes professeurs sont compétents et patients. J'espère obtenir mon diplôme l'année prochaine.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Education"
+    },
+    {
+      "id": "a2-11",
+      "title": "La Santé",
+      "content": "Il est important de prendre soin de sa santé. Je fais du sport régulièrement et je mange équilibré. Je vais chez le médecin une fois par an pour un contrôle. Je ne fume pas et je bois peu d'alcool. La santé, c'est la richesse.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Health"
+    },
+    {
+      "id": "a2-12",
+      "title": "Les Médias",
+      "content": "Je regarde les informations à la télévision tous les soirs. J'écoute aussi la radio en voiture. Je lis le journal le matin avec mon café. Internet me permet de me tenir informé rapidement. Les médias sont importants pour comprendre le monde.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Media"
+    },
+    {
+      "id": "a2-13",
+      "title": "Les Fêtes Françaises",
+      "content": "En France, nous célébrons de nombreuses fêtes. Le 14 juillet, c'est la fête nationale. À Noël, nous mangeons en famille. Le 1er janvier, nous nous souhaitons une bonne année. Pâques est une fête religieuse importante. Les fêtes rassemblent les familles.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Holidays"
+    },
+    {
+      "id": "a2-14",
+      "title": "La Technologie",
+      "content": "La technologie a changé notre vie quotidienne. J'utilise mon smartphone pour tout : appeler, envoyer des messages, prendre des photos. Internet me permet de travailler de chez moi. Les réseaux sociaux me permettent de rester en contact avec mes amis. La technologie évolue très rapidement.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Technology"
+    },
+    {
+      "id": "a2-15",
+      "title": "Les Sports en France",
+      "content": "Le football est le sport le plus populaire en France. L'équipe de France a gagné la Coupe du monde en 2018. Le tennis est aussi très suivi, surtout pendant Roland-Garros. Le cyclisme est populaire grâce au Tour de France. Les Français aiment le sport.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Sports"
+    },
+    {
+      "id": "a2-16",
+      "title": "L'Environnement",
+      "content": "La protection de l'environnement est importante. Je trie mes déchets et j'économise l'eau. Je prends les transports en commun pour réduire la pollution. Le réchauffement climatique nous préoccupe tous. Chacun peut agir pour protéger la planète.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Environment"
+    },
+    {
+      "id": "a2-17",
+      "title": "Les Arts",
+      "content": "J'aime aller au musée pour voir les tableaux. Le Louvre est un musée magnifique. J'écoute de la musique classique et du jazz. Le théâtre me passionne aussi. Les arts enrichissent notre vie culturelle.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Arts"
+    },
+    {
+      "id": "a2-18",
+      "title": "Les Relations",
+      "content": "Les relations humaines sont complexes mais enrichissantes. J'ai de bonnes relations avec ma famille. Au travail, je m'entends bien avec mes collègues. L'amour et l'amitié sont essentiels au bonheur. La communication est la clé de relations réussies.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Relationships"
+    },
+    {
+      "id": "a2-19",
+      "title": "Les Traditions",
+      "content": "Les traditions françaises sont nombreuses. Nous mangeons des galettes des rois en janvier. Le 1er avril, nous faisons des blagues. Les mariages sont des événements importants. Les traditions nous relient à notre passé.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Traditions"
+    },
+    {
+      "id": "a2-20",
+      "title": "L'Avenir",
+      "content": "Je pense souvent à mon avenir. J'aimerais voyager dans le monde entier. Je voudrais apprendre d'autres langues. J'espère avoir une famille un jour. L'avenir me semble plein de possibilités.",
+      "level": "A2",
+      "estimatedTime": 4,
+      "delfLevel": "A2",
+      "topic": "Future"
+    },
+    {
+      "id": "b1-01",
+      "title": "La Culture Française",
+      "content": "La France est célèbre pour sa culture riche et diversifiée. La cuisine française est reconnue dans le monde entier, avec des plats comme la ratatouille, le coq au vin et les crêpes. La littérature française a donné naissance à de grands écrivains comme Victor Hugo, Molière et Albert Camus. L'art français, de la Renaissance à l'impressionnisme, continue d'influencer les artistes du monde entier. La France est également connue pour sa mode, son cinéma et sa musique.",
+      "level": "B1",
+      "estimatedTime": 7,
+      "delfLevel": "B1",
+      "topic": "Culture"
+    },
+    {
+      "id": "b1-02",
+      "title": "L'Histoire de Paris",
+      "content": "Paris, la capitale de la France, a une histoire fascinante qui remonte à plus de deux mille ans. Fondée par les Gaulois, la ville a été conquise par les Romains qui l'ont nommée Lutèce. Au Moyen Âge, Paris est devenue un centre culturel et intellectuel important. La Révolution française de 1789 a changé le cours de l'histoire. Aujourd'hui, Paris reste une ville cosmopolite et dynamique, attirant des millions de visiteurs chaque année.",
+      "level": "B1",
+      "estimatedTime": 8,
+      "delfLevel": "B1",
+      "topic": "History"
+    },
+    {
+      "id": "b1-03",
+      "title": "L'Économie Française",
+      "content": "L'économie française est l'une des plus importantes d'Europe. La France est un pays industrialisé avec des secteurs clés comme l'aéronautique, l'automobile et l'agroalimentaire. Le tourisme représente une part significative de l'économie nationale. Cependant, la France fait face à des défis économiques comme le chômage et la dette publique. Les réformes économiques sont nécessaires pour maintenir la compétitivité du pays.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Economy"
+    },
+    {
+      "id": "b1-04",
+      "title": "Le Système Éducatif",
+      "content": "Le système éducatif français est centralisé et gratuit. L'école est obligatoire de 6 à 16 ans. Les élèves passent le baccalauréat à la fin du lycée. L'enseignement supérieur comprend les universités et les grandes écoles. L'éducation est une priorité nationale en France, avec des investissements importants dans la formation des enseignants et l'équipement des établissements.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Education"
+    },
+    {
+      "id": "b1-05",
+      "title": "La Politique Française",
+      "content": "La France est une république démocratique avec un système présidentiel. Le président de la République est élu pour cinq ans. Le Parlement comprend l'Assemblée nationale et le Sénat. Les partis politiques jouent un rôle important dans la vie démocratique. Les élections sont libres et transparentes, permettant aux citoyens de choisir leurs représentants.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Politics"
+    },
+    {
+      "id": "b1-06",
+      "title": "L'Environnement et le Développement Durable",
+      "content": "La protection de l'environnement est devenue une préoccupation majeure en France. Le gouvernement a mis en place des politiques ambitieuses pour réduire les émissions de gaz à effet de serre. Les énergies renouvelables se développent rapidement. Les citoyens sont encouragés à adopter des comportements écologiques. La transition énergétique est un défi pour l'avenir du pays.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Environment"
+    },
+    {
+      "id": "b1-07",
+      "title": "La Société Française",
+      "content": "La société française est diverse et multiculturelle. L'immigration a contribué à enrichir la culture française. Cependant, l'intégration des immigrés reste un défi. Les inégalités sociales persistent malgré les efforts du gouvernement. La solidarité et la fraternité sont des valeurs importantes de la République française.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Society"
+    },
+    {
+      "id": "b1-08",
+      "title": "Les Médias et l'Information",
+      "content": "La France dispose d'une presse libre et indépendante. Les médias jouent un rôle crucial dans l'information des citoyens. Internet a transformé la façon dont nous consommons l'information. Les réseaux sociaux influencent l'opinion publique. La lutte contre les fake news est un enjeu majeur de notre époque.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Media"
+    },
+    {
+      "id": "b1-09",
+      "title": "La Santé Publique",
+      "content": "Le système de santé français est considéré comme l'un des meilleurs au monde. La Sécurité sociale assure une couverture maladie universelle. Les hôpitaux publics offrent des soins de qualité. Cependant, le système fait face à des défis financiers. La prévention et la promotion de la santé sont des priorités nationales.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Health"
+    },
+    {
+      "id": "b1-10",
+      "title": "L'Innovation Technologique",
+      "content": "La France est un pays d'innovation avec de nombreuses start-ups et entreprises technologiques. La recherche et développement sont soutenus par l'État. Les universités et les grandes écoles forment des ingénieurs de haut niveau. L'intelligence artificielle et le numérique transforment l'économie. La France veut devenir un leader européen de l'innovation.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Technology"
+    },
+    {
+      "id": "b1-11",
+      "title": "Les Relations Internationales",
+      "content": "La France joue un rôle important sur la scène internationale. Elle est membre permanent du Conseil de sécurité de l'ONU. L'Union européenne est un partenaire privilégié. La diplomatie française promeut la paix et les droits de l'homme. La coopération internationale est essentielle pour résoudre les défis mondiaux.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "International Relations"
+    },
+    {
+      "id": "b1-12",
+      "title": "Le Patrimoine Culturel",
+      "content": "La France possède un patrimoine culturel exceptionnel. Les monuments historiques attirent des millions de visiteurs. L'UNESCO a classé de nombreux sites français au patrimoine mondial. La préservation du patrimoine nécessite des investissements importants. La culture française rayonne dans le monde entier.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Cultural Heritage"
+    },
+    {
+      "id": "b1-13",
+      "title": "L'Agriculture et l'Alimentation",
+      "content": "L'agriculture française est diversifiée et moderne. La France est le premier producteur agricole européen. L'agriculture biologique se développe rapidement. La sécurité alimentaire est une priorité nationale. Les consommateurs sont de plus en plus attentifs à la qualité des produits.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Agriculture"
+    },
+    {
+      "id": "b1-14",
+      "title": "Le Sport et les Loisirs",
+      "content": "Le sport occupe une place importante dans la société française. Le football est le sport le plus populaire. Les Jeux olympiques de Paris 2024 sont très attendus. Le sport amateur se développe dans toutes les régions. L'activité physique est encouragée pour la santé publique.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Sports"
+    },
+    {
+      "id": "b1-15",
+      "title": "La Justice et les Droits",
+      "content": "La justice française est indépendante et impartiale. Les droits de l'homme sont protégés par la Constitution. L'accès à la justice est garanti pour tous les citoyens. Les réformes judiciaires visent à améliorer l'efficacité du système. La lutte contre la corruption est une priorité.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Justice"
+    },
+    {
+      "id": "b1-16",
+      "title": "L'Urbanisme et l'Aménagement",
+      "content": "L'urbanisme français privilégie le développement durable. Les villes cherchent à réduire la pollution et les embouteillages. Les transports en commun se développent dans les métropoles. L'habitat social est une priorité pour lutter contre la précarité. L'aménagement du territoire vise à réduire les inégalités régionales.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Urban Planning"
+    },
+    {
+      "id": "b1-17",
+      "title": "La Recherche Scientifique",
+      "content": "La France investit massivement dans la recherche scientifique. Le CNRS est l'un des plus grands organismes de recherche au monde. Les universités et les grandes écoles forment des chercheurs de haut niveau. L'innovation technologique est soutenue par l'État. La coopération internationale en recherche est encouragée.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Science"
+    },
+    {
+      "id": "b1-18",
+      "title": "Les Arts et la Création",
+      "content": "La France est un pays de création artistique. Le cinéma français est reconnu internationalement. La musique française est diverse et créative. Les arts plastiques continuent d'innover. La création artistique contribue au rayonnement culturel de la France.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Arts"
+    },
+    {
+      "id": "b1-19",
+      "title": "Le Travail et l'Emploi",
+      "content": "Le marché du travail français évolue rapidement. Le chômage reste un défi majeur pour le gouvernement. Les nouvelles technologies transforment les métiers. La formation professionnelle est essentielle pour l'adaptation des travailleurs. La flexibilité du travail est un enjeu de société.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "Employment"
+    },
+    {
+      "id": "b1-20",
+      "title": "L'Europe et l'Intégration",
+      "content": "La France est un membre fondateur de l'Union européenne. L'intégration européenne a transformé la vie des citoyens. L'euro est la monnaie commune de nombreux pays. La libre circulation des personnes est une réalité. L'Europe doit relever de nouveaux défis au XXIe siècle.",
+      "level": "B1",
+      "estimatedTime": 6,
+      "delfLevel": "B1",
+      "topic": "European Integration"
+    },
+    {
+      "id": "b2-01",
+      "title": "La Philosophie Française",
+      "content": "La France a donné naissance à de grands philosophes qui ont marqué l'histoire de la pensée. Descartes, avec son cogito ergo sum, a révolutionné la philosophie moderne. Les Lumières, avec Voltaire, Rousseau et Diderot, ont préparé la Révolution française. Au XXe siècle, Sartre, Camus et Beauvoir ont développé l'existentialisme. La philosophie française continue d'influencer la pensée contemporaine mondiale.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Philosophy"
+    },
+    {
+      "id": "b2-02",
+      "title": "L'Évolution de la Langue Française",
+      "content": "Le français a évolué considérablement au cours des siècles. Du latin vulgaire au français moderne, la langue a subi de nombreuses transformations. L'Académie française, créée en 1635, veille sur la pureté de la langue. L'influence de l'anglais et des nouvelles technologies modifie le vocabulaire. La francophonie, avec ses 300 millions de locuteurs, assure la vitalité de la langue française dans le monde.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Language Evolution"
+    },
+    {
+      "id": "b2-03",
+      "title": "Les Défis Démographiques",
+      "content": "La France fait face à des défis démographiques complexes. Le vieillissement de la population pose des questions sur le financement des retraites. L'immigration contribue au renouvellement démographique mais soulève des débats politiques. La natalité française reste relativement élevée en Europe. L'aménagement du territoire doit tenir compte de ces évolutions démographiques.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Demographics"
+    },
+    {
+      "id": "b2-04",
+      "title": "La Mondialisation et ses Enjeux",
+      "content": "La mondialisation transforme profondément la société française. L'économie française doit s'adapter à la concurrence internationale. Les entreprises françaises développent leurs activités à l'étranger. La culture française résiste à l'uniformisation mondiale. La France doit trouver sa place dans un monde multipolaire en mutation.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Globalization"
+    },
+    {
+      "id": "b2-05",
+      "title": "L'Intelligence Artificielle et l'Avenir",
+      "content": "L'intelligence artificielle révolutionne tous les secteurs de l'économie française. L'industrie automobile développe des véhicules autonomes. La santé utilise l'IA pour améliorer les diagnostics. L'éducation s'adapte aux nouvelles technologies d'apprentissage. La France investit massivement dans l'IA pour ne pas rater cette révolution technologique.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Artificial Intelligence"
+    },
+    {
+      "id": "b2-06",
+      "title": "Les Inégalités Sociales",
+      "content": "Les inégalités sociales persistent en France malgré les politiques de redistribution. L'écart entre les plus riches et les plus pauvres se creuse. L'éducation ne parvient pas toujours à corriger les inégalités de naissance. Les territoires ruraux et urbains connaissent des développements différents. La lutte contre les inégalités reste un défi majeur pour la cohésion sociale.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Social Inequalities"
+    },
+    {
+      "id": "b2-07",
+      "title": "La Transition Écologique",
+      "content": "La transition écologique est devenue une priorité absolue en France. Le réchauffement climatique menace l'équilibre de la planète. Les énergies renouvelables se développent rapidement mais insuffisamment. L'agriculture doit s'adapter aux changements climatiques. Les citoyens modifient leurs comportements pour réduire leur empreinte carbone.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Ecological Transition"
+    },
+    {
+      "id": "b2-08",
+      "title": "Le Numérique et la Société",
+      "content": "Le numérique transforme radicalement la société française. L'administration publique se dématérialise progressivement. Le commerce en ligne révolutionne les habitudes de consommation. Les réseaux sociaux modifient les relations humaines. La fracture numérique menace d'exclure certaines populations de la société moderne.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Digital Society"
+    },
+    {
+      "id": "b2-09",
+      "title": "La Sécurité et les Défis Contemporains",
+      "content": "La sécurité est devenue une préoccupation majeure des Français. Le terrorisme a profondément marqué la société. La cybersécurité est un enjeu crucial à l'ère du numérique. Les forces de l'ordre s'adaptent aux nouvelles menaces. L'équilibre entre sécurité et libertés individuelles fait débat.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Security"
+    },
+    {
+      "id": "b2-10",
+      "title": "L'Innovation et la Recherche",
+      "content": "La France investit massivement dans l'innovation et la recherche. Les start-ups françaises rivalisent avec les géants américains. La recherche fondamentale et appliquée sont complémentaires. Les universités et les entreprises collaborent de plus en plus. L'innovation est la clé de la compétitivité française dans l'économie mondiale.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Innovation"
+    },
+    {
+      "id": "b2-11",
+      "title": "Les Migrations et l'Intégration",
+      "content": "Les migrations internationales transforment la société française. L'intégration des immigrés est un défi complexe. La diversité culturelle enrichit la société mais pose des questions d'identité. Les politiques d'immigration oscillent entre ouverture et fermeture. L'Europe doit coordonner ses politiques migratoires.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Migration"
+    },
+    {
+      "id": "b2-12",
+      "title": "La Démocratie Participative",
+      "content": "La démocratie participative se développe en France. Les citoyens sont de plus en plus consultés sur les décisions publiques. Les référendums et les consultations populaires se multiplient. Les nouvelles technologies facilitent la participation citoyenne. La démocratie représentative doit évoluer pour répondre aux attentes des citoyens.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Democracy"
+    },
+    {
+      "id": "b2-13",
+      "title": "L'Économie Circulaire",
+      "content": "L'économie circulaire représente l'avenir du développement durable. La réduction des déchets devient une priorité nationale. Le recyclage et la réutilisation se développent dans tous les secteurs. Les entreprises adoptent des modèles économiques plus durables. La transition vers une économie circulaire nécessite des investissements importants.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Circular Economy"
+    },
+    {
+      "id": "b2-14",
+      "title": "Les Nouvelles Formes de Travail",
+      "content": "Le monde du travail évolue rapidement avec l'essor du numérique. Le télétravail se généralise dans de nombreux secteurs. Les plateformes numériques créent de nouveaux emplois. La formation tout au long de la vie devient indispensable. L'adaptation des travailleurs aux changements technologiques est cruciale.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Work Evolution"
+    },
+    {
+      "id": "b2-15",
+      "title": "La Santé Mentale",
+      "content": "La santé mentale devient une préoccupation majeure de santé publique. Le stress et l'anxiété touchent de plus en plus de Français. Les troubles psychiques sont mieux reconnus et traités. La prévention en santé mentale se développe. L'accompagnement des personnes fragiles psychologiquement s'améliore.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Mental Health"
+    },
+    {
+      "id": "b2-16",
+      "title": "L'Éducation du XXIe Siècle",
+      "content": "L'éducation doit s'adapter aux défis du XXIe siècle. Les nouvelles technologies transforment les méthodes d'apprentissage. L'enseignement des compétences numériques devient prioritaire. L'éducation à l'environnement et au développement durable se généralise. La formation des enseignants évolue pour répondre aux nouveaux enjeux.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Education Future"
+    },
+    {
+      "id": "b2-17",
+      "title": "Les Villes Intelligentes",
+      "content": "Les villes françaises se transforment en smart cities. L'intelligence artificielle optimise la gestion urbaine. Les transports intelligents réduisent la pollution. L'efficacité énergétique des bâtiments s'améliore. Les citoyens participent à la construction de la ville de demain.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Smart Cities"
+    },
+    {
+      "id": "b2-18",
+      "title": "La Bioéthique",
+      "content": "Les progrès de la médecine posent des questions éthiques complexes. L'intelligence artificielle en santé soulève des interrogations. La génétique permet de nouvelles thérapies mais pose des questions de confidentialité. L'expérimentation sur l'embryon fait débat. La bioéthique doit encadrer l'innovation médicale.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Bioethics"
+    },
+    {
+      "id": "b2-19",
+      "title": "L'Intelligence Émotionnelle",
+      "content": "L'intelligence émotionnelle devient une compétence clé dans le monde professionnel. La gestion des émotions améliore les relations humaines. L'empathie et la communication non violente se développent. La formation à l'intelligence émotionnelle se généralise. Cette compétence complète l'intelligence artificielle dans le monde du travail.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Emotional Intelligence"
+    },
+    {
+      "id": "b2-20",
+      "title": "L'Avenir de l'Humanité",
+      "content": "L'humanité fait face à des défis sans précédent. Le réchauffement climatique menace l'équilibre de la planète. L'intelligence artificielle transforme le travail et la société. Les inégalités mondiales persistent malgré les progrès technologiques. L'avenir de l'humanité dépend de notre capacité à relever ces défis ensemble.",
+      "level": "B2",
+      "estimatedTime": 8,
+      "delfLevel": "B2",
+      "topic": "Humanity Future"
     }
   ]
 }
-
