@@ -9,13 +9,13 @@ import articlesJson from '@/data/articles.json'
 export default function HomePage() {
   const [selectedModule, setSelectedModule] = useState<string | null>(null)
   
-  const modules = (modulesJson as { modules: Array<{ id: string; title: string; description: string; articles: string[]; delfLevel: string; totalArticles: number }> }).modules.map(moduleData => ({
-    id: moduleData.id,
-    title: moduleData.title,
-    description: moduleData.description,
-    articleCount: moduleData.totalArticles,
-    articles: moduleData.articles,
-    delfLevel: moduleData.delfLevel
+  const modules = (modulesJson as { modules: Array<{ id: string; title: string; description: string; articles: string[]; delfLevel: string; totalArticles: number }> }).modules.map(moduleItem => ({
+    id: moduleItem.id,
+    title: moduleItem.title,
+    description: moduleItem.description,
+    articleCount: moduleItem.totalArticles,
+    articles: moduleItem.articles,
+    delfLevel: moduleItem.delfLevel
   }))
 
   const allArticles = (articlesJson as { articles: Array<{ id: string; title: string; level: string; delfLevel: string; topic: string }> }).articles
