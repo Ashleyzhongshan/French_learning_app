@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Volume2, Plus, Check, Languages } from 'lucide-react'
 import { translateText, getCommonsAudioUrlForFrenchWord, pickPreferredFrenchVoice, createNaturalSpeechSettings } from '@/lib/utils'
 
@@ -13,7 +13,7 @@ interface InteractiveWordProps {
 
 export default function InteractiveWord({ word, onToggleSave, isSaved, isActive, onActivate }: InteractiveWordProps) {
   const [showTooltip, setShowTooltip] = useState(false)
-  const [isTranslating, setIsTranslating] = useState(false)
+  const [, setIsTranslating] = useState(false)
   const [translation, setTranslation] = useState<string>('')
   
   const cleanWord = word.replace(/[.,!?;:]/g, '').toLowerCase()

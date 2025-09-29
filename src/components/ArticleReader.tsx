@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import InteractiveWord from '@/components/InteractiveWord'
-import { BookOpen, Clock, Volume2, X, Languages, Play, Pause, Square } from 'lucide-react'
+import { BookOpen, Clock, X, Languages, Play, Pause, Square } from 'lucide-react'
 import { translateText, pickPreferredFrenchVoice, createNaturalSpeechSettings } from '@/lib/utils'
 
 interface Article {
@@ -22,7 +22,7 @@ export default function ArticleReader({ article }: { article: Article }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [audioProgress, setAudioProgress] = useState(0)
   const [audioDuration, setAudioDuration] = useState(0)
-  const [currentUtterance, setCurrentUtterance] = useState<SpeechSynthesisUtterance | null>(null)
+  const [, setCurrentUtterance] = useState<SpeechSynthesisUtterance | null>(null)
   const [isPaused, setIsPaused] = useState(false)
   const [progressInterval, setProgressInterval] = useState<NodeJS.Timeout | null>(null)
   const [isDragging, setIsDragging] = useState(false)
@@ -50,7 +50,7 @@ export default function ArticleReader({ article }: { article: Article }) {
     return () => {
       if (progressInterval) clearInterval(progressInterval)
     }
-  }, [isPlaying, audioDuration, isDragging])
+  }, [isPlaying, audioDuration, isDragging, progressInterval])
 
   const toggleSaveWord = (word: string) => {
     const normalized = word.toLowerCase()
@@ -68,7 +68,7 @@ export default function ArticleReader({ article }: { article: Article }) {
       localStorage.setItem('savedWords', JSON.stringify(newSavedWords))
 
       const flashcards = JSON.parse(localStorage.getItem('flashcards') || '[]')
-      if (!flashcards.some((fc: any) => fc.word.toLowerCase() === normalized)) {
+      if (!flashcards.some((fc: { id: number; word: string; createdAt: string }) => fc.word.toLowerCase() === normalized)) {
         flashcards.push({
           id: Date.now(),
           word: normalized,
@@ -158,9 +158,9 @@ export default function ArticleReader({ article }: { article: Article }) {
       } else {
         speak()
       }
-    } catch (_) {
-      // noop
-    }
+            } catch {
+              // noop
+            }
   }
 
   const stopAudio = () => {
@@ -230,9 +230,9 @@ export default function ArticleReader({ article }: { article: Article }) {
         if ('speechSynthesis' in window) {
           window.speechSynthesis.cancel()
         }
-      } catch (_) {
-        // noop
-      }
+            } catch {
+              // noop
+            }
     }
   }, [])
 
@@ -241,9 +241,9 @@ export default function ArticleReader({ article }: { article: Article }) {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel()
       }
-    } catch (_) {
-      // noop
-    }
+            } catch {
+              // noop
+            }
     router.push('/')
   }
 
@@ -350,7 +350,7 @@ export default function ArticleReader({ article }: { article: Article }) {
       <div className="mt-8 p-4 bg-blue-50 rounded-lg">
         <p className="text-blue-800">
           <BookOpen className="inline mr-2" size={18} />
-          You've saved {savedWords.length} words for flashcard review!
+          You&apos;ve saved {savedWords.length} words for flashcard review!
         </p>
       </div>
     </div>

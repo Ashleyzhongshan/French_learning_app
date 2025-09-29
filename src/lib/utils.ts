@@ -5,9 +5,9 @@ export async function translateText(text: string, from: string, to: string): Pro
     const data = await res.json()
     const translated = data?.responseData?.translatedText as string | undefined
     return translated ?? ''
-  } catch (_) {
-    return ''
-  }
+          } catch {
+            return ''
+          }
 }
 
 export async function getCommonsAudioUrlForFrenchWord(word: string): Promise<string | null> {
@@ -23,12 +23,12 @@ export async function getCommonsAudioUrlForFrenchWord(word: string): Promise<str
       const res = await fetch(url)
       const data = await res.json()
       const pages = data?.query?.pages ?? {}
-      const first = Object.values(pages)[0] as any
+      const first = Object.values(pages)[0] as { imageinfo?: Array<{ url?: string }> } | undefined
       const info = first?.imageinfo?.[0]?.url as string | undefined
       if (info) return info
-    } catch (_) {
-      // try next candidate
-    }
+            } catch {
+              // try next candidate
+            }
   }
   return null
 }

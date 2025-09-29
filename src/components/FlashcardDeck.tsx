@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { RotateCcw, ArrowLeft, ArrowRight, Volume2 } from 'lucide-react'
 import { translateText, getCommonsAudioUrlForFrenchWord, pickPreferredFrenchVoice, createNaturalSpeechSettings } from '@/lib/utils'
 
@@ -22,17 +22,17 @@ export default function FlashcardDeck() {
     else setFlashcards([])
   }
 
-  const fetchTranslation = async (word: string) => {
+  const fetchTranslation = useCallback(async (word: string) => {
     if (translations[word]) return
     setIsTranslating(true)
     try {
       const translation = await translateText(word, 'fr', 'en')
       setTranslations(prev => ({ ...prev, [word]: translation }))
-    } catch (_) {
-      setTranslations(prev => ({ ...prev, [word]: 'Translation not available' }))
-    }
+            } catch {
+              setTranslations(prev => ({ ...prev, [word]: 'Translation not available' }))
+            }
     setIsTranslating(false)
-  }
+  }, [translations])
 
   const pronounceWord = async () => {
     try {
@@ -96,7 +96,7 @@ export default function FlashcardDeck() {
     }
     window.addEventListener('flashcards:updated', onUpdate)
     return () => window.removeEventListener('flashcards:updated', onUpdate)
-  }, [])
+  }, [currentIndex, flashcards])
 
   useEffect(() => {
     if (flashcards.length > 0 && isFlipped) {
@@ -106,7 +106,7 @@ export default function FlashcardDeck() {
         fetchTranslation(currentWord)
       }
     }
-  }, [isFlipped, currentIndex, flashcards, translations])
+  }, [isFlipped, currentIndex, flashcards, translations, fetchTranslation])
 
   if (flashcards.length === 0) {
     return (

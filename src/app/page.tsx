@@ -9,21 +9,21 @@ import articlesJson from '@/data/articles.json'
 export default function HomePage() {
   const [selectedModule, setSelectedModule] = useState<string | null>(null)
   
-  const modules = (modulesJson as { modules: Array<{ id: string; title: string; description: string; articles: string[]; delfLevel: string; totalArticles: number }> }).modules.map(module => ({
-    id: module.id,
-    title: module.title,
-    description: module.description,
-    articleCount: module.totalArticles,
-    articles: module.articles,
-    delfLevel: module.delfLevel
+  const modules = (modulesJson as { modules: Array<{ id: string; title: string; description: string; articles: string[]; delfLevel: string; totalArticles: number }> }).modules.map(moduleData => ({
+    id: moduleData.id,
+    title: moduleData.title,
+    description: moduleData.description,
+    articleCount: moduleData.totalArticles,
+    articles: moduleData.articles,
+    delfLevel: moduleData.delfLevel
   }))
 
   const allArticles = (articlesJson as { articles: Array<{ id: string; title: string; level: string; delfLevel: string; topic: string }> }).articles
 
   const getModuleArticles = (moduleId: string) => {
-    const module = modules.find(m => m.id === moduleId)
-    if (!module) return []
-    return module.articles.map(articleId => 
+    const moduleData = modules.find(m => m.id === moduleId)
+    if (!moduleData) return []
+    return moduleData.articles.map(articleId => 
       allArticles.find(article => article.id === articleId)
     ).filter(Boolean)
   }
@@ -106,7 +106,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Smart Flashcards</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
               AI-generated flashcards from your saved words. Spaced repetition 
-              algorithm ensures you never forget what you've learned.
+              algorithm ensures you never forget what you&apos;ve learned.
             </p>
             <div className="mt-6 flex items-center text-green-600 font-semibold group-hover:translate-x-2 transition-transform">
               Explore <ChevronRight size={16} className="ml-1" />
